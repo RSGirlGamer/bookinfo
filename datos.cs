@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+
 
 namespace Proyecto___DAS
 {
     public class datos
         
     {
-        static void defineDatos()
+        static void defineprogramas()
         {
             List<programas> listaPrograms = new List<programas>();
             List<Libros> listaBooks = new List<Libros>();
