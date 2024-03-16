@@ -13,8 +13,7 @@ namespace Proyecto___DAS
         static void defineprogramas()
         {
             List<programas> listaPrograms = new List<programas>();
-            List<Libros> listaBooks = new List<Libros>();
-            List<Lenguajes> listaLanguage = new List<Lenguajes>();
+
 
             listaPrograms.Add(new programas
             {
@@ -57,6 +56,101 @@ namespace Proyecto___DAS
 
 
         }
+        static void DefineBooks()
+        {
+
+            List<Libros> listaBooks = new List<Libros>();
+
+            // Agregar libros a la lista
+            listaBooks.Add(new Libros
+            {
+                Nombre = "Harry Potter",
+                percent = 44,
+                autor = "J. K. Rowling",
+                generos = "Novela",
+                subs = "Literatura fantástica, literatura juvenil, novela de desarrollo y literatura infantil y juvenil",
+                pages = "3407 (ENG), 3665 (ESP)",
+                protas = "Harry Potter, Ron weasley, Hermione Granger, Ginny Weasley, Neville Longbottom, Albus Dumbledore",
+                antag = "Lord Voldemort, Mortífagos",
+                argumento = "La historia comienza con la celebración del mundo mágico. Durante muchos años, había sido aterrorizado por el malvado mago Lord Voldemort. La noche del 31 de octubre, mató a Lily y James Potter. Sin embargo, cuando intenta matar a su hijo de 1 año, Harry, la maldición asesina Avada Kedavra se vuelve sobre sí mismo. El cuerpo de Voldemort resulta destruido, pero él sobrevive: no está muerto ni vivo. Por su parte, a Harry solo le queda una cicatriz con forma de rayo en la frente que es el único remanente físico de la maldición de Voldemort. Harry es el único sobreviviente de la maldición asesina, y a raíz de la misteriosa derrota de Voldemort, el mundo mágico empieza a llamarlo como «el niño que sobrevivió»."
+            });
+
+            listaBooks.Add(new Libros
+            {
+                Nombre = "Goosebumps",
+                percent = 30,
+                autor = "Robert Lawrence Stine",
+                generos = "Ciencia ficción, literatura infantil y suspenso",
+                subs = "Suspenso, terror, juvenil",
+                pages = "---",
+                protas = "El protagonista principal de una historia de Pesadillas / Escalofríos, es a menudo situado en una ubicación remota o de alguna manera aislada en algunas situaciones.",
+                antag = "----",
+                argumento = "La serie consta de un total de 60 libros para España, el último de los cuales (Sangre de monstruo IV) se publicó en 1999, mientras que en Hispanoamérica consta de 45 historias. El nombre se tradujo en España como Pesadillas y en Hispanoamérica como Escalofríos."
+            });
+
+            listaBooks.Add(new Libros
+            {
+                Nombre = "Perry Mason",
+                percent = 26,
+                autor = "Erle Stanley Gardner",
+                generos = "Novela policiaca",
+                subs = "xx",
+                pages = "xx",
+                protas = "Perry Mason",
+                antag = "xx",
+                argumento = "El personaje era un abogado que llegó a aparecer en 80 novelas e historias cortas, la mayoría de las cuales versaban sobre la defensa de un cliente que había sido acusado de asesinato. En general, Perry Mason era capaz de demostrar la inocencia de su cliente mediante la averiguación de la culpabilidad del verdadero asesino, otro personaje de la historia."
+            });
+
+            // Puedes hacer lo que desees con la lista de libros aquí
+        }
+        static void defineLanguages()
+        {
+            List<Lenguajes> listaLanguage = new List<Lenguajes>();
+
+            listaLanguage.Add(new Lenguajes
+            {
+                Nombre = "PYTHON",
+                percent = 47,
+                devs = "Python Software Foundation",
+                exts = ".py, .pyc, .pyd, .pyo, .pyw, .pyz",
+                OS = "Multiplataforma",
+                paradigma = "Multiparadigma: orientado a objetos, imperativo, funcional, reflexivo",
+                latestV = "3.8.3",
+                license = "Python Software Foundation License",
+                released = "1991"
+            });
+
+            listaLanguage.Add(new Lenguajes
+            {
+                Nombre = "JAVA",
+                percent = 38,
+                devs = "James Gosling y Sun Microsystems",
+                exts = "java, class, jar, jad y jmod",
+                OS = "Multiplataforma",
+                paradigma = "Orientado a objetos, imperativo",
+                latestV = "14.01",
+                license = "GNU GPL / Java Community Process",
+                released = "1996"
+            });
+
+            listaLanguage.Add(new Lenguajes
+            {
+                Nombre = "JAVASCRIPT",
+                percent = 15,
+                devs = "xx",
+                exts = ".js",
+                OS = "xx",
+                paradigma = "Multiparadigma, programación funcional, programación basada en prototipos, imperativo, interpretado (scripting)",
+                latestV = "ECMAScript2016",
+                license = "xx",
+                released = "1995"
+            });
+
+        }
+
+      
+
+
 
 
 
