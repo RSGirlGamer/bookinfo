@@ -22,6 +22,9 @@ namespace Proyecto___DAS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lblName.Text = Session.name;
+            lbluser.Text = Session.user;
+
 
         }
 
@@ -37,6 +40,8 @@ namespace Proyecto___DAS
             switch (prefs)
             {
                 case "Lenguajes de Programación":
+                    List <Lenguajes> data =  datos.DefineLanguages();
+                    mostrarData(data);
 
                     break;
                 case "Libros":
@@ -49,8 +54,10 @@ namespace Proyecto___DAS
                     break;
             }
         }
+        static void mostrarData(List<Lenguajes> data)
+        {
 
-        
+        }
     }
 
 }

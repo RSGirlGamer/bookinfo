@@ -40,9 +40,10 @@ namespace Proyecto___DAS
             if (index>-1)
             {
                 //Para pasar informacion de este form al  otro
-                string categ = cat(index);
-                string nmbr = name(index); 
-                Bienvenida bienvenida = new Bienvenida(categ, nmbr);
+                Session.user = user;
+                Session.prefs = cat(index);
+                Session.name = name(index); 
+                Bienvenida bienvenida = new Bienvenida();
                 bienvenida.Show();
                 this.Hide();
             }

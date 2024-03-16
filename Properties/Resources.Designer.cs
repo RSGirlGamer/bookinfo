@@ -63,6 +63,16 @@ namespace Proyecto___DAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_profile_avatar_svgrepo_com {
+            get {
+                object obj = ResourceManager.GetObject("user_profile_avatar_svgrepo_com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("user_svgrepo_com", resourceCulture);

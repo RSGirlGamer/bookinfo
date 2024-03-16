@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Proyecto___DAS
 {
-    class Persona
+    public  class Persona
     {
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public  string Nombre { get; set; }
+        public  string Apellido { get; set; }
         public DateTime FechaNacimiento { get; set; }
     }
 
-    class LoginInfo : Persona
+    public class LoginInfo : Persona
     {
-        public string Username { get; set; }
+        public string  Username { get; set; }
         public string Password { get; set; }
         public string Preferencia { get; set; }
 

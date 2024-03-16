@@ -13,11 +13,10 @@ namespace Proyecto___DAS
     public partial class Bienvenida : Form
     {
         private string categoria, name;
-        public Bienvenida(string categoria, string name)
+        public Bienvenida()
         {
             InitializeComponent();
-            this.categoria = categoria;
-            this.name = name;
+
         }
 
         private void copylbl_Click(object sender, EventArgs e)
