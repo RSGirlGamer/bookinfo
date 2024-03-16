@@ -10,12 +10,12 @@ namespace Proyecto___DAS
     public class datos
         
     {
-        static void defineprogramas()
+        public static void Defineprogramas()
         {
-            List<programas> listaPrograms = new List<programas>();
+            List<Programas> listaPrograms = new List<Programas>();
 
 
-            listaPrograms.Add(new programas
+            listaPrograms.Add(new Programas
             {
                 Nombre = "GAME OF THRONES",
                 percent = 40,
@@ -28,7 +28,7 @@ namespace Proyecto___DAS
                 sinopsis = "La trama de Game of Thrones está basada en la serie de novelas Canción de hielo y fuego, y relata las vivencias de un grupo de personajes de distintas casas nobiliarias en el continente ficticio Poniente para tener el control del Trono de Hierro y gobernar los siete reinos que conforman el territorio."
             });
 
-            listaPrograms.Add(new programas
+            listaPrograms.Add(new Programas
             {
                 Nombre = "CHERNOBYL",
                 percent = 34,
@@ -41,7 +41,7 @@ namespace Proyecto___DAS
                 sinopsis = "La serie gira en torno al desastre nuclear de Chernóbil de abril de 1986 y los esfuerzos de limpieza sin precedentes que siguieron. Cuenta con un reparto encabezado por Jared Harris, Stellan Skarsgård y Emily Watson."
             });
 
-            listaPrograms.Add(new programas
+            listaPrograms.Add(new Programas
             {
                 Nombre = "THE MARVELOUS MRS. MAISEL",
                 percent = 26,
@@ -56,7 +56,7 @@ namespace Proyecto___DAS
 
 
         }
-        static void DefineBooks()
+        public static void DefineBooks()
         {
 
             List<Libros> listaBooks = new List<Libros>();
@@ -103,7 +103,7 @@ namespace Proyecto___DAS
 
             // Puedes hacer lo que desees con la lista de libros aquí
         }
-        static void defineLanguages()
+        public static void DefineLanguages()
         {
             List<Lenguajes> listaLanguage = new List<Lenguajes>();
 
@@ -149,7 +149,7 @@ namespace Proyecto___DAS
         }
 
 
-        static void definePersonas()
+        static List<LoginInfo> DefinePersonas()
         {
             List<LoginInfo> listaPersonas = new List<LoginInfo>();
 
@@ -202,6 +202,7 @@ namespace Proyecto___DAS
                 Username = "pedrorodriguez",
                 Password = "pass1234"
             });
+            return listaPersonas;
 
         }
     }

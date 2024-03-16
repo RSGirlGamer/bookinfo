@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto___DAS
 {
-    public class programas
+    public class Programas
     {
         public string Nombre { get; set; }
         public int percent { get; set; }
