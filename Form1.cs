@@ -16,7 +16,7 @@ namespace Proyecto___DAS
         public Form1()
         {
             InitializeComponent();
-            var usuarios = LoginInfo.DefinePersonas();
+          //  var usuarios = LoginInfo.DefinePersonas();
 
         }
 

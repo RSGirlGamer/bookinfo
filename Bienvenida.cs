@@ -12,9 +12,12 @@ namespace Proyecto___DAS
 {
     public partial class Bienvenida : Form
     {
-        public Bienvenida()
+        private string categoria, name;
+        public Bienvenida(string categoria, string name)
         {
             InitializeComponent();
+            this.categoria = categoria;
+            this.name = name;
         }
 
         private void copylbl_Click(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace Proyecto___DAS
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -54,6 +57,7 @@ namespace Proyecto___DAS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Console.WriteLine("test para ver si abre");
             progressBar.Width += 3;
 
             if (progressBar.Width >= 599)

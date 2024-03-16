@@ -40,12 +40,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(136, 280);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 25);
             this.panel1.TabIndex = 0;
@@ -54,6 +55,7 @@
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(71)))), ((int)(((byte)(230)))));
+            this.progressBar.Controls.Add(this.panel1);
             this.progressBar.Location = new System.Drawing.Point(136, 280);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(46, 25);
@@ -86,7 +88,7 @@
             this.copylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copylbl.Location = new System.Drawing.Point(348, 340);
             this.copylbl.Name = "copylbl";
-            this.copylbl.Size = new System.Drawing.Size(75, 16);
+            this.copylbl.Size = new System.Drawing.Size(76, 16);
             this.copylbl.TabIndex = 3;
             this.copylbl.Text = "Creado por";
             this.copylbl.Click += new System.EventHandler(this.copylbl_Click);
@@ -159,13 +161,13 @@
             this.Controls.Add(this.copylbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cargandolbl);
-            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida";
             this.Load += new System.EventHandler(this.Bienvenida_Load);
+            this.progressBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
