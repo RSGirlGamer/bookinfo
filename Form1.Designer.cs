@@ -77,16 +77,7 @@ namespace Proyecto___DAS
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(611, 262);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(578, 225);
-            this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -96,7 +87,6 @@ namespace Proyecto___DAS
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(611, 262);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -107,7 +97,6 @@ namespace Proyecto___DAS
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(611, 262);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // graficos
@@ -137,21 +126,35 @@ namespace Proyecto___DAS
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // dataGridView1
+            //
+            this.initTable(this.dataGridView1, 1);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(578, 225);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.AllowUserToAddRows = false;
+            // 
             // dataGridView2
             // 
+            this.initTable(this.dataGridView2, 2);
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(7, 7);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(598, 249);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.AllowUserToAddRows = false;
             // 
             // dataGridView3
             // 
+            this.initTable(this.dataGridView3, 3);
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(4, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(601, 252);
             this.dataGridView3.TabIndex = 0;
+            this.dataGridView3.AllowUserToAddRows = false;
             // 
             // pictureBox1
             // 
@@ -205,7 +208,6 @@ namespace Proyecto___DAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

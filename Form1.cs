@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Proyecto___DAS
 {
@@ -16,7 +17,7 @@ namespace Proyecto___DAS
         public Form1()
         {
             InitializeComponent();
-          //  var usuarios = LoginInfo.DefinePersonas();
+            //  var usuarios = LoginInfo.DefinePersonas();
 
         }
 
@@ -24,15 +25,16 @@ namespace Proyecto___DAS
         {
             lblName.Text = Session.name;
             lbluser.Text = Session.user;
-
-
+            this.dataGridView1.Columns[0].HeaderText = "";
+            this.dataGridView2.Columns[0].HeaderText = "";
+            this.dataGridView3.Columns[0].HeaderText = "";
         }
 
         private void tbControl_SelectdIndx(object sender, EventArgs e)
         {
 
         }
-        static void GetPrefData(LoginInfo info)
+        void GetPrefData()
         {
             string prefs;
             prefs = Session.prefs;
@@ -40,8 +42,6 @@ namespace Proyecto___DAS
             switch (prefs)
             {
                 case "Lenguajes de Programación":
-                    List <Lenguajes> data =  datos.DefineLanguages();
-                    mostrarData(data);
 
                     break;
                 case "Libros":
@@ -54,10 +54,128 @@ namespace Proyecto___DAS
                     break;
             }
         }
-        static void mostrarData(List<Lenguajes> data)
-        {
 
+        void initTable(DataGridView grid, int tab)
+        {
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn firstColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn secondColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn thirdColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn fourthColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn fifthColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn sixthColumn = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn seventhColumn = new DataGridViewTextBoxColumn();
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            imageColumn.Width = 150;
+            grid.Columns.Add(imageColumn);
+            grid.Columns.AddRange(new System.Windows.Forms.DataGridViewTextBoxColumn[] { nameColumn, firstColumn, secondColumn, thirdColumn, fourthColumn, fifthColumn, sixthColumn, seventhColumn });
+            nameColumn.HeaderText = "Nombre";
+            grid.RowTemplate.Height = 150;
+            switch (Session.prefs)
+            {
+                case "Lenguajes de Programación":
+                    setLanguageData(firstColumn, secondColumn, thirdColumn, fourthColumn, fifthColumn, sixthColumn, seventhColumn, grid, tab);
+                    break;
+                case "Libros":
+                    setBooksData(firstColumn, secondColumn, thirdColumn, fourthColumn, fifthColumn, sixthColumn, seventhColumn, grid, tab);
+                    break;
+                case "Programas de Entretenimiento":
+                    setProgramsData(firstColumn, secondColumn, thirdColumn, fourthColumn, fifthColumn, sixthColumn, seventhColumn, grid, tab);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        void setProgramsData(DataGridViewTextBoxColumn firstColumn, DataGridViewTextBoxColumn secondColumn,
+            DataGridViewTextBoxColumn thirdColumn, DataGridViewTextBoxColumn fourthColumn,
+            DataGridViewTextBoxColumn fifthColumn, DataGridViewTextBoxColumn sixthColumn,
+            DataGridViewTextBoxColumn seventhColumn, DataGridView grid, int tab)
+        {
+            firstColumn.HeaderText = "Título en Español";
+            secondColumn.HeaderText = "Creado por";
+            thirdColumn.HeaderText = "Protagonistas";
+            fourthColumn.HeaderText = "País de Origen";
+            fifthColumn.HeaderText = "Temporadas";
+            sixthColumn.HeaderText = "Episodios";
+            seventhColumn.HeaderText = "Sinopsis";
+            Programas program = datos.Defineprogramas()[tab - 1];
+            switch (tab)
+            {
+                case 1:
+                    this.tabPage1.Text = program.Nombre;
+                    break;
+                case 2:
+                    this.tabPage2.Text = program.Nombre;
+                    break;
+                case 3:
+                    this.tabPage3.Text = program.Nombre;
+                    break;
+                default:
+                    break;
+            };
+            grid.Rows.Add(program.imagen, program.Nombre, program.title, program.creado, program.protas, program.origen, program.seasons, program.caps, program.sinopsis);
+        }
+
+        void setBooksData(DataGridViewTextBoxColumn firstColumn, DataGridViewTextBoxColumn secondColumn,
+            DataGridViewTextBoxColumn thirdColumn, DataGridViewTextBoxColumn fourthColumn,
+            DataGridViewTextBoxColumn fifthColumn, DataGridViewTextBoxColumn sixthColumn,
+            DataGridViewTextBoxColumn seventhColumn, DataGridView grid, int tab)
+        {
+            firstColumn.HeaderText = "Autor";
+            secondColumn.HeaderText = "Género";
+            thirdColumn.HeaderText = "Subgénero";
+            fourthColumn.HeaderText = "# páginas";
+            fifthColumn.HeaderText = "Protagonistas";
+            sixthColumn.HeaderText = "Antagonistas";
+            seventhColumn.HeaderText = "Argumento";
+            Libros book = datos.DefineBooks()[tab - 1];
+            switch (tab)
+            {
+                case 1:
+                    this.tabPage1.Text = book.Nombre;
+                    break;
+                case 2:
+                    this.tabPage2.Text = book.Nombre;
+                    break;
+                case 3:
+                    this.tabPage3.Text = book.Nombre;
+                    break;
+                default:
+                    break;
+            };
+            grid.Rows.Add(book.imagen, book.Nombre, book.autor, book.generos, book.subs, book.pages, book.protas, book.antag, book.argumento);
+        }
+
+        void setLanguageData(DataGridViewTextBoxColumn firstColumn, DataGridViewTextBoxColumn secondColumn,
+            DataGridViewTextBoxColumn thirdColumn, DataGridViewTextBoxColumn fourthColumn,
+            DataGridViewTextBoxColumn fifthColumn, DataGridViewTextBoxColumn sixthColumn,
+            DataGridViewTextBoxColumn seventhColumn, DataGridView grid, int tab)
+        {
+            firstColumn.HeaderText = "Desarrollador(es)";
+            secondColumn.HeaderText = "Extensiones";
+            thirdColumn.HeaderText = "Apareció en";
+            fourthColumn.HeaderText = "Sistema Operativo";
+            fifthColumn.HeaderText = "Paradigma";
+            sixthColumn.HeaderText = "Ultima Versión Estable";
+            seventhColumn.HeaderText = "Licencia";
+            Lenguajes language = datos.DefineLanguages()[tab - 1];
+            switch (tab)
+            {
+                case 1:
+                    this.tabPage1.Text = language.Nombre;
+                    break;
+                case 2:
+                    this.tabPage2.Text = language.Nombre;
+                    break;
+                case 3:
+                    this.tabPage3.Text = language.Nombre;
+                    break;
+                default:
+                    break;
+            };
+            grid.Rows.Add(language.imagen, language.Nombre, language.devs, language.exts, language.released, language.OS, language.paradigma, language.latestV, language.license);
         }
     }
-
 }
