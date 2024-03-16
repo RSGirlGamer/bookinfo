@@ -32,15 +32,18 @@ namespace Proyecto___DAS
         static void GetPrefData(LoginInfo info)
         {
             string prefs;
-            prefs = info.Preferencia;
+            prefs = Session.prefs;
 
             switch (prefs)
             {
                 case "Lenguajes de Programación":
+
                     break;
                 case "Libros":
+
                     break;
                 case "Programas de Entretenimiento":
+
                     break;
                 default:
                     break;

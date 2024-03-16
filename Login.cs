@@ -53,6 +53,7 @@ namespace Proyecto___DAS
         public int getData(string user, string pw)
         {
             var usuarios = LoginInfo.DefinePersonas();
+
             int indice =-1;
 
             foreach (var usuario in usuarios)

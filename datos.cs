@@ -10,7 +10,7 @@ namespace Proyecto___DAS
     public class datos
         
     {
-        public static void Defineprogramas()
+        public static List<Programas> Defineprogramas()
         {
             List<Programas> listaPrograms = new List<Programas>();
 
@@ -53,10 +53,10 @@ namespace Proyecto___DAS
                 caps = "26",
                 sinopsis = "La serie cuenta la historia de un ama de casa en Nueva York que descubre que tiene una habilidad especial para la comedia en vivo. El primer episodio se estrenó como parte de la temporada de pilotos de primavera de Amazon Studios el 17 de marzo de 2017, recibiendo la aclamación de la crítica."
             });
-
+            return listaPrograms;
 
         }
-        public static void DefineBooks()
+        public static List<Libros> DefineBooks()
         {
 
             List<Libros> listaBooks = new List<Libros>();
@@ -101,9 +101,9 @@ namespace Proyecto___DAS
                 argumento = "El personaje era un abogado que llegó a aparecer en 80 novelas e historias cortas, la mayoría de las cuales versaban sobre la defensa de un cliente que había sido acusado de asesinato. En general, Perry Mason era capaz de demostrar la inocencia de su cliente mediante la averiguación de la culpabilidad del verdadero asesino, otro personaje de la historia."
             });
 
-            // Puedes hacer lo que desees con la lista de libros aquí
+            return listaBooks;
         }
-        public static void DefineLanguages()
+        public static List<Lenguajes> DefineLanguages()
         {
             List<Lenguajes> listaLanguage = new List<Lenguajes>();
 
@@ -145,7 +145,7 @@ namespace Proyecto___DAS
                 license = "xx",
                 released = "1995"
             });
-
+            return listaLanguage;
         }
 
 
