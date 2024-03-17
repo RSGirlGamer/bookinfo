@@ -45,6 +45,11 @@ namespace Proyecto___DAS
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+>>>>>>> a3ee5ddded29cfb804dc0ab8595d6d9faaeac187
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -267,6 +272,7 @@ namespace Proyecto___DAS
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

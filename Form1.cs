@@ -15,12 +15,10 @@ namespace Proyecto___DAS
 
     public partial class Form1 : Form
     {
-        Chart dChart = new Chart();
         public Form1()
         {
             InitializeComponent();
             //  var usuarios = LoginInfo.DefinePersonas();
-            dChart.Parent = graficos;
 
         }
 
@@ -36,7 +34,6 @@ namespace Proyecto___DAS
         private void tbControl_SelectdIndx(object sender, EventArgs e)
         { 
             int tab = tabControl1.SelectedIndex;
-            Console.WriteLine(tab);
 
             switch (tab)
             {
@@ -47,7 +44,8 @@ namespace Proyecto___DAS
                 case 2:
                     break;
                 case 3:
-                    GetPrefData(dChart);
+                    getPrefData(this.chart);
+
                     break;
                     
 
@@ -55,138 +53,13 @@ namespace Proyecto___DAS
                     break;
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
-        public static void GetPrefData(Chart dChart)
+        public void getPrefData(Chart dChart)
 
         {
             string prefs;
             prefs = Session.prefs;
            
-            Console.WriteLine(prefs);
 
             switch (prefs)
             {
@@ -330,28 +203,25 @@ namespace Proyecto___DAS
                     break;
             };
             grid.Rows.Add(language.imagen, language.Nombre, language.devs, language.exts, language.released, language.OS, language.paradigma, language.latestV, language.license);
-
+        }
         static void ShowPieChart(Chart chart, IEnumerable<object> data)
         {
             chart.Series.Clear();
             Series series = chart.Series.Add("Porcentajes");
             series.ChartType = SeriesChartType.Doughnut;
-            Console.WriteLine(series.ChartType.ToString());
 
             foreach (var item in data)
             {
                 var propertyName = item.GetType().GetProperty("Nombre");
                 var propertyperc = item.GetType().GetProperty("percent");
-                Console.WriteLine(propertyName);
-                Console.WriteLine(propertyperc);
-                Console.WriteLine(propertyperc == null);
-                Console.WriteLine(propertyName == null);
                 if (propertyName!= null && propertyperc!= null)
                 {
                     string nombre = propertyName.GetValue(item)?.ToString();
                     int percent = Convert.ToInt32(propertyperc.GetValue(item));
-                    Console.WriteLine(nombre+" "+percent);
-                    chart.Series["s1"].Points.AddXY(nombre, percent);        
+
+                    chart.Series[0].Points.AddXY(nombre, percent);
+                    chart.Series[0].IsValueShownAsLabel = true;
+
                 }
             }
             chart.Update();
