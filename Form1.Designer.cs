@@ -32,28 +32,29 @@ namespace Proyecto___DAS
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.graficos = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.graficos = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.graficos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.graficos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,6 +100,14 @@ namespace Proyecto___DAS
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(598, 249);
+            this.dataGridView2.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView3);
@@ -110,41 +119,6 @@ namespace Proyecto___DAS
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // graficos
-            // 
-            this.graficos.Controls.Add(this.chart1);
-            this.graficos.Location = new System.Drawing.Point(4, 22);
-            this.graficos.Name = "graficos";
-            this.graficos.Padding = new System.Windows.Forms.Padding(3);
-            this.graficos.Size = new System.Drawing.Size(611, 262);
-            this.graficos.TabIndex = 3;
-            this.graficos.Text = "Estadisticas";
-            this.graficos.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 6);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(599, 250);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(598, 249);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -152,6 +126,17 @@ namespace Proyecto___DAS
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(601, 252);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // graficos
+            // 
+            this.graficos.Controls.Add(this.chart);
+            this.graficos.Location = new System.Drawing.Point(4, 22);
+            this.graficos.Name = "graficos";
+            this.graficos.Padding = new System.Windows.Forms.Padding(3);
+            this.graficos.Size = new System.Drawing.Size(611, 262);
+            this.graficos.TabIndex = 3;
+            this.graficos.Text = "Estadisticas";
+            this.graficos.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -166,20 +151,42 @@ namespace Proyecto___DAS
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(687, 23);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(638, 22);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(41, 13);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "label1";
             // 
             // lbluser
             // 
             this.lbluser.AutoSize = true;
-            this.lbluser.Location = new System.Drawing.Point(687, 46);
+            this.lbluser.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbluser.Location = new System.Drawing.Point(641, 40);
             this.lbluser.Name = "lbluser";
             this.lbluser.Size = new System.Drawing.Size(35, 13);
             this.lbluser.TabIndex = 2;
             this.lbluser.Text = "label1";
+            // 
+            // chart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart.Legends.Add(legend1);
+            this.chart.Location = new System.Drawing.Point(6, 6);
+            this.chart.Name = "chart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart.Series.Add(series1);
+            this.chart.Size = new System.Drawing.Size(599, 250);
+            this.chart.TabIndex = 0;
+            this.chart.Text = "chart1";
+            title1.Name = "Porcentajes";
+            this.chart.Titles.Add(title1);
+            this.chart.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
@@ -197,12 +204,12 @@ namespace Proyecto___DAS
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.graficos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.graficos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,10 +225,10 @@ namespace Proyecto___DAS
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lbluser;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }
 
