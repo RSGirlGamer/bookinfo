@@ -79,5 +79,86 @@ namespace Proyecto___DAS.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap gameofthrones
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("gameofthrones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap goosebumps
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("goosebumps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap marvelous
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("marvelous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap harrypotter
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("harrypotter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap chernobyl
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("chernobyl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap perrymasson
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("perrymasson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap python
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("python", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap java
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("java1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap javascript
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("javascript", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

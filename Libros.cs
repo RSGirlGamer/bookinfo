@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,6 @@ namespace Proyecto___DAS
         public string protas { get; set; }
         public string antag { get; set; }
         public string argumento { get; set; }
+        public Image imagen { get; set; }
     }
 }

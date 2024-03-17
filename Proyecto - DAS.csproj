@@ -109,7 +109,31 @@
     <None Include="Resources\user-svgrepo-com.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-profile-avatar-svgrepo-com.png" />
+    <None Include="Resources\gameofthrones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\chernobyl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\marvelous.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\harrypotter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\goosebumps.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\perrymasson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\python.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\java1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="Resources\javascript.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
