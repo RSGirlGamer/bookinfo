@@ -232,10 +232,7 @@ namespace Proyecto___DAS
             chart.Update();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 
 }

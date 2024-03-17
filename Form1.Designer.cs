@@ -186,7 +186,7 @@ namespace Proyecto___DAS
             this.chart.Text = "chart1";
             title1.Name = "Porcentajes";
             this.chart.Titles.Add(title1);
-            this.chart.Click += new System.EventHandler(this.chart1_Click);
+
             // 
             // Form1
             // 
