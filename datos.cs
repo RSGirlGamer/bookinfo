@@ -18,6 +18,7 @@ namespace Proyecto___DAS
             listaPrograms.Add(new Programas
             {
                 Nombre = "GAME OF THRONES",
+                imagen = global::Proyecto___DAS.Properties.Resources.gameofthrones,
                 percent = 40,
                 title = "Juego de tronos",
                 creado = "David Benioff, D. B. Weiss",
@@ -31,6 +32,7 @@ namespace Proyecto___DAS
             listaPrograms.Add(new Programas
             {
                 Nombre = "CHERNOBYL",
+                imagen = global::Proyecto___DAS.Properties.Resources.chernobyl,
                 percent = 34,
                 title = "Chernóbil",
                 creado = "Craig Mazin",
@@ -44,6 +46,7 @@ namespace Proyecto___DAS
             listaPrograms.Add(new Programas
             {
                 Nombre = "THE MARVELOUS MRS. MAISEL",
+                imagen = global::Proyecto___DAS.Properties.Resources.marvelous,
                 percent = 26,
                 title = "La maravillosa Señora Maisel",
                 creado = "Amy Sherman-Palladino",
@@ -65,6 +68,7 @@ namespace Proyecto___DAS
             listaBooks.Add(new Libros
             {
                 Nombre = "Harry Potter",
+                imagen = global::Proyecto___DAS.Properties.Resources.harrypotter,
                 percent = 44,
                 autor = "J. K. Rowling",
                 generos = "Novela",
@@ -78,6 +82,7 @@ namespace Proyecto___DAS
             listaBooks.Add(new Libros
             {
                 Nombre = "Goosebumps",
+                imagen = global::Proyecto___DAS.Properties.Resources.goosebumps,
                 percent = 30,
                 autor = "Robert Lawrence Stine",
                 generos = "Ciencia ficción, literatura infantil y suspenso",
@@ -91,6 +96,7 @@ namespace Proyecto___DAS
             listaBooks.Add(new Libros
             {
                 Nombre = "Perry Mason",
+                imagen = global::Proyecto___DAS.Properties.Resources.perrymasson,
                 percent = 26,
                 autor = "Erle Stanley Gardner",
                 generos = "Novela policiaca",
@@ -110,6 +116,7 @@ namespace Proyecto___DAS
             listaLanguage.Add(new Lenguajes
             {
                 Nombre = "PYTHON",
+                imagen = global::Proyecto___DAS.Properties.Resources.python,
                 percent = 47,
                 devs = "Python Software Foundation",
                 exts = ".py, .pyc, .pyd, .pyo, .pyw, .pyz",
@@ -123,6 +130,7 @@ namespace Proyecto___DAS
             listaLanguage.Add(new Lenguajes
             {
                 Nombre = "JAVA",
+                imagen = global::Proyecto___DAS.Properties.Resources.java,
                 percent = 38,
                 devs = "James Gosling y Sun Microsystems",
                 exts = "java, class, jar, jad y jmod",
@@ -136,6 +144,7 @@ namespace Proyecto___DAS
             listaLanguage.Add(new Lenguajes
             {
                 Nombre = "JAVASCRIPT",
+                imagen = global::Proyecto___DAS.Properties.Resources.javascript,
                 percent = 15,
                 devs = "xx",
                 exts = ".js",

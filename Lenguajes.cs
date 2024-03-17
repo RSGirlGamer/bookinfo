@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,6 @@ namespace Proyecto___DAS
         public string latestV { get; set; }
         public string license { get; set; }
         public string released { get; set; }
+        public Image imagen { get; set; }
     }
 }
