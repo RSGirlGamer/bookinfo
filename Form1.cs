@@ -226,7 +226,7 @@ namespace Proyecto___DAS
                     string nombre = propertyName.GetValue(item)?.ToString();
                     int percent = Convert.ToInt32(propertyperc.GetValue(item));
                     Console.WriteLine(nombre+" "+percent);
-                    chart.Series[0].Points.AddXY(nombre, percent);        
+                    chart.Series["s1"].Points.AddXY(nombre, percent);        
                 }
             }
             chart.Update();
